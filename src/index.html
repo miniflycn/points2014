@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PPT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="./css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/animate.min.css">
+<link rel="stylesheet" href="./css/slide.css"/>
+<style>
+body {
+    background-color: #000;
+}
+
+.slide1 > h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 300px;
+    width: 100%;
+    font-size: 50px;
+}
+.slide1 > p {
+    color: #999;
+    width: 65%;
+    text-align: right;
+}
+.slide2 > img {
+    max-width: 100%;
+}
+
+em {
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<div class="slide" data-slide="0">
+    <div class="slide1">
+        <h1 class="hide" data-animate="zoomIn">Some Good Points</h1>
+        <p class="hide" data-animate="fadeIn">by donaldyang</p>
+    </div>
+</div>
+
+<div class="slide" data-slide="1">
+    <div class="slide2">
+        <h2>Main Points</h2>
+        <ol>
+            <li>任何前端开发遇到的问题都可以通过<em>封装</em>和<em>线下构建</em>来简化</li>
+                <ul>
+                    <li>封装：jQuery、Angular、Polymer</li>
+                    <li>构建：Sass、Compass</li>
+                    <li>封装 & 构建：React</li>
+                </ul>
+            <li>预定大于配置，良好的约定可以极大得简化开发上手难度和构建难度</li>
+        </ol>
+    </div>
+</div>
+
+<div class="slide" data-slide="2">
+    <div class="slide2">
+        <h2>Outline</h2>
+        <ul>
+            <li>Continuous的三种阶段</li>
+            <li>本地开发服务器取代Fiddler开发模式</li>
+            <li>gulp插件复用与动态编译式开发</li>
+            <li>约定式构建</li>
+            <li>前端错误收集与快速定位</li>
+            <li>AST应用</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide" data-slide="3">
+    <div class="slide1">
+        <h1 class="hide" data-animate="zoomIn">Continuous的三种阶段</h1>
+    </div>
+</div>
+
+<div class="slide" data-slide="4">
+    <div class="slide2">
+        <h2>三种阶段</h2>
+        <ol>
+            <li>持续集成(Continuous integration)</li>
+            <li>持续交付(Continuous delivery)</li>
+            <li>持续部署(Continuous deployment)</li>
+        </ol>
+    </div>
+</div>
+
+<div class="slide" data-slide="5">
+    <div class="slide2">
+        <h2>持续集成(Continuous integration)</h2>
+        <ul>
+            <li>提早发现问题</li>
+            <li>避免集成地狱(Integration Hell)，简单的说就是避免将许多人代码集成到一起成为一个发行版本时产生错误时无法定位，互相怀疑对方代码有问题的情况</li>
+            <li>单元测试保证单元可靠，集成测试保证整体可靠，持续集成保证每次集成的粒度可控，出问题可查</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide" data-slide="6">
+    <div class="slide2">
+        <h2>持续交付(Continuous delivery)</h2>
+        <p>将代码持续交付给QA团队，或用户，使得用户及早体验到产品，触发更短的迭代周期</p>
+    </div>
+</div>
+
+<div class="slide" data-slide="7">
+    <div class="slide2">
+        <h2>持续部署(Continuous deployment)</h2>
+        <p>更加极端的持续交付，当代码提交后，会自动触发自动化测试，当测试结束后自动部署，请见下图：</p>
+        <img src="./img/cd.png">
+    </div>
+</div>
+
+<script src="http://1.url.cn/jslib/jquery/1.9.1/jquery.min.js"></script>
+<script src="./js/slide.js"></script>
+<script>
+
+    Slide
+        .init();
+</script>
+</body>
+</html>
