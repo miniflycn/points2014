@@ -61,8 +61,8 @@ em {
         <h2>Outline</h2>
         <ul>
             <li>Continuous的三种阶段</li>
-            <li>本地开发服务器取代Fiddler开发模式</li>
-            <li>gulp插件复用与动态编译式开发</li>
+            <li>从Wilon到Mockup Service</li>
+            <li>Stream流行引发的变革</li>
             <li>约定式构建</li>
             <li>前端错误收集与快速定位</li>
             <li>AST应用</li>
@@ -126,6 +126,77 @@ em {
 <div class="slide" data-slide="9">
     <div class="slide1">
         <h1>Braindead CI DEMO</h1>
+    </div>
+</div>
+
+<div class="slide" data-slide="10">
+    <div class="slide1">
+        <h1>从Wilon到Mockup Service</h1>
+    </div>
+</div>
+
+<div class="slide" data-slide="11">
+    <div class="slide2">
+        <h2>Fillder & Wilon的问题</h2>
+        <p>本质上来说Fillder是一个debug工具，满足调试需求，贯穿开发过程并不是一个好想法。</p>
+        <ul>
+            <li>不稳定，运行较慢，开启时间过久导致机子顿卡</li>
+            <li>项目配置无法管理，导出导入很不人性化</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide" data-slide="12">
+    <div class="slide2">
+        <h2>Mockup service方案</h2>
+        <p>在本地启动一个服务器，来代替Wilon的本地替换功能</p>
+        <ul>
+            <li>功能简单，运行稳定</li>
+            <li>类似Grunt和Gulp，每个项目有单一的项目配置，跟随项目源码一起保存在代码托管服务中的那个，对于单一应项目开发者不需要多次配置</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide" data-slide="13">
+    <div class="slide1">
+        <h1>Panel中的Mockup Service演示</h1>
+    </div>
+</div>
+
+<div class="slide" data-slide="14">
+    <div class="slide1">
+        <h1>Stream流行引发的变革</h1>
+    </div>
+</div>
+
+<div class="slide" data-slide="15">
+    <div class="slide2">
+        <h2>Pipe</h2>
+        <p>Unix中的重要编程理论，我们经常用 | 来使用管道。</p>
+        <p>管道的魅力在于，任何人只要知道管道的规格，就能自行生产管道，并将各种连接起来(听起来很想水管工^ ^)</p>
+        <p>NodeJS中Stream的引入起初是为了解决各种IO问题，但当发展到EventStream的时候，已经变成了任意数据的传递标准(即管道的规格)，满足这种标准我们就能自己生产自己的管子</p>
+    </div>
+</div>
+
+<div class="slide" data-slide="16">
+    <div class="slide2">
+        <h2>Gulp</h2>
+        <p>Gulp之前，NodeJS早已在Zlib和Crypto表现出其强大。但对于我来说Gulp是让我真正认识Stream的契机。</p>
+        <p>Gulp约定了管子的标准，并且实际上我们可以看成，他是指定输入内容，经过管子，输出处理后内容。所以，如果我们把输入输出替换掉，中间的管子是可以复用的</p>
+    </div>
+</div>
+
+<div class="slide" data-slide="17">
+    <div class="slide2">
+        <h2>middleware-pipe与inhale</h2>
+        <p>middleware-pipe是一次Gulp管子复用的尝试，他可以将Gulp管子复用到Connect或Express框架中，继而让动态编译变得简单</p>
+        <p>inhale是基于Connect和middleware-pipe的本地服务器框架，我们还在努力中，目前在“QQ查找——找课程”中有不错的尝试</p>
+    </div>
+</div>
+
+<div class="slide" data-slide="18">
+    <div class="slide1">
+        <h1>QQ查找——找课程演示</h1>
     </div>
 </div>
 
